@@ -65,6 +65,10 @@ public class OrderItem implements Serializable{
 	public void setPrice(Double price) {
 		this.price = price;
 	}
+	
+	public Double getSubTotal() { //no Java EE o que vale é o método get, portanto o método deve ser implementado com o prefixo get
+		return price * quantity;
+	}
 
 	@Override
 	public int hashCode() {
